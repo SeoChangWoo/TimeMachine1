@@ -4,20 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity Web Player | 타임머신활동</title>
-    <style>
-      /* WebGL 캔버스 스타일 */
-      body {
-          margin: 0;
-          overflow: hidden;
-      }
-
-      #unity-canvas {
-          width: 100vw; /* 브라우저 창 너비에 맞춤 */
-          height: 100vh; /* 브라우저 창 높이에 맞춤 */
-          max-width: 1280px; /* 최대 너비 */
-          max-height: 720px; /* 최대 높이 */
-      }
-  </style>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -38,21 +24,6 @@
       </div>
     </div>
     <script>
-          window.addEventListener("resize", function () {
-        var canvas = document.getElementById("unity-canvas");
-        var width = window.innerWidth;
-        var height = window.innerHeight;
-
-        // 화면 비율 유지 (16:9)
-        var aspect = 16 / 9;
-        if (width / height > aspect) {
-            canvas.style.width = (height * aspect) + "px";
-            canvas.style.height = height + "px";
-        } else {
-            canvas.style.width = width + "px";
-            canvas.style.height = (width / aspect) + "px";
-        }
-    });
       var canvas = document.querySelector("#unity-canvas");
 
       // Shows a temporary message banner/ribbon for a few seconds, or
